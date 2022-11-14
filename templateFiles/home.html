@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='/staticFiles/main.css' />
+
+
+
+
+  </head>
+  <body  id="hideAll" class="hideAll">
+    <header>
+      <div class="central-div">
+        <div class="logo"/>
+      </div>
+    </header>
+    <div class="central-div">
+      <h1 class="first-header">Home Credit Diagnostic tool</h1>
+      <p class = "main-text" onclick="writeText()">Have you ever loaned your money to a friend and then they suddenly started to have "connection problems" whenever you called them? We have too! And we say - No more! With our amazing tool you can just upload all their data* and we'll tell you whether your money will be safe in this investment! :)</p>
+      <p class = "sneaky-small-text">*Their data may or may not be sold to third parties</p>
+    </div>
+    <div class="hero">
+      <div class="layer">
+        <div class="hero-content">
+          <span>Check before you write a check</span>
+        </div>
+      </div>
+    </div>
+    <div  class = "form-outer">
+      <div class="central-div">
+        <div id="anchor" class="form-inner">
+          <div id="stroke_form" class="form">
+            <h2>Upload the data</h2>
+            <p>Upload a json file containing all the data of the person in question and then click the button below.</p>
+            <form action="\predict" class="columns-container" method=post enctype=multipart/form-data>
+              <div class="column">
+                <div>
+                  <input type="file" id="file_upload" name="file_upload">
+                </div>
+                <div>
+                  <input id="submit_button" type="submit" value="Should you give a loan?">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="central-div">
+        <span>Home Credit</span>
+        <hr></hr>
+        <p>© 2022 Home Credit Bank. All rights reserved. <br/>
+          Btw, this is not an actual HomeCredit page, just a student project</p>
+      </div>
+    </footer>
+    <script>
+
+      window.onload=function() {
+          document.getElementById('hideAll').style.visibility = "visible";
+      }
+
+    </script>
+  </body>
+</html>

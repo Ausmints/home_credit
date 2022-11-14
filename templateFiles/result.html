@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href='/staticFiles/main.css' />
+
+
+
+
+  </head>
+  <body  id="hideAll" class="hideAll">
+    <header>
+      <div class="central-div">
+        <div class="logo"/>
+      </div>
+    </header>
+    <div class="central-div">
+      <h1 class="first-header">Home Credit Diagnostic tool</h1>
+      <p class = "main-text" onclick="writeText()">Have you ever loaned your money to a friend and then they suddenly started to have "connection problems" whenever you called them? We have too! And we say - No more! With our amazing tool you can just upload all their data* and we'll tell you whether your money will be safe in this investment! :)</p>
+      <p class = "sneaky-small-text">*Their data may or may not be sold to third parties</p>
+    </div>
+    <div class="hero">
+      <div class="layer">
+        <div class="hero-content">
+          <span>Check before you write a check</span>
+        </div>
+      </div>
+    </div>
+    <div  class = "form-outer">
+      <div class="central-div">
+        <div id="anchor" class="form-inner">
+          <div id="stroke_form" class="form">
+            <h2><span id="result"></span></h2>
+            <p><span id="result_2"></span></p>
+            <p>The probability predicted was <span id="result_proba"></span> and the cutoff threshold - <span id="threshold"></span></p>
+            <div class="columns-container">
+              <div class="column">
+                <div>
+                  <button><a class="button_link" href="{{url_for("home")}}">Back to home page</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="central-div">
+        <span>Home Credit</span>
+        <hr></hr>
+        <p>© 2022 Home Credit Bank. All rights reserved. <br/>
+          Btw, this is not an actual HomeCredit page, just a student project</p>
+      </div>
+    </footer>
+    <script>
+
+    function showAnswer() {
+      let paragraph = document.getElementById("result")
+      let paragraph_2 = document.getElementById("result_2")
+      let paragraph_result_proba = document.getElementById("result_proba")
+      let paragraph_threshold = document.getElementById("threshold")
+      if (prediction_result == 1) {
+        paragraph.innerHTML = "You should not invest :(";
+        paragraph_2.innerHTML = "Your investments might not be safe"
+        paragraph_result_proba.textContent += prediction_result_proba
+        paragraph_threshold.textContent += prediction_threshold
+
+      } else {
+        paragraph.innerHTML = "You should invest! :)";
+        paragraph_2.innerHTML = "Your investments will be safe"
+        paragraph_result_proba.textContent += prediction_result_proba
+        paragraph_threshold.textContent += prediction_threshold
+      }
+
+    }
+
+
+      let queryString = window.location.search;
+      let prediction_result = "None";
+      let prediction_result_proba = "None";
+      let prediction_threshold = "None";
+      if (queryString) {
+        let urlParams = new URLSearchParams(queryString);
+        prediction_result = urlParams.get('prediction_result');
+        prediction_result_proba = urlParams.get('prediction_result_proba');
+        prediction_threshold = urlParams.get('prediction_threshold');
+      }
+
+      function onloadFunc() {
+        showAnswer()
+
+      }
+
+      window.onload=function() {
+          document.getElementById('hideAll').style.visibility = "visible";
+          onloadFunc()
+      }
+
+    </script>
+  </body>
+</html>
