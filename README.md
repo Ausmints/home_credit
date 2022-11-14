@@ -1,10 +1,10 @@
 # Predicting the financial state of loan applicants using Home Credit data
 
-## Table of contents 
-
 Decision to lend your money to somebody else should never be taken without careful consideration. If it's a friend that you lend your money to, his inability to pay you back might ruin your friendship, or if you have a lending company, too many bad investments might lead to bankruptcy and you having to apply for a loan yourself. That doesn't mean that you shouldn't do it - either you just want to help somebody in a hard situation, or create a living out of it, but you should do it carefully. 
 
 In this project we will create a model to help with these decisions - a model that predicts whether the person applying for the loan is likely to struggle with repaying their debt.
+
+## Table of contents 
 
 * Setting up the libraries
 
@@ -34,3 +34,6 @@ In this project we will create a model to help with these decisions - a model th
 
 * Modelling using all data
 
+## Libraries used 
+
+scikit-learn, xgboost
