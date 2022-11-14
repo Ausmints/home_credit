@@ -1,34 +1,32 @@
-# Predicting loan status, grade and interest rate using Lending club data
+# Predicting the financial state of loan applicants using Home Credit data
 
 ## Table of contents 
 
-####Setting up the libraries
+* Setting up the libraries
 
-### First task
+* Figuring out the objectives
 
-#### Setting up the data
+* EDA
 
-#### EDA
+* Data cleaning pt 1
 
-#### Missing data and data engineering
+* Modelling using just current loan data
 
-#### Model training
+* Other datasets EDA
 
-#### Edit from the future
+* * POS_CASH_balance dataset
 
-### Second task
+* * credit_card_balance dataset
 
-#### Setting up the data
+* * previous_application dataset
 
-#### EDA
+* * bureau_balance dataset
 
-#### Data cleaning and enineering
+* * bureau dataset
 
-#### Model training
+* EDA combined data
 
-#### Third task
+* Data cleaning pt 2
 
-#### Testing
-
-Predicting whether a person should be given a loan, if yes, predicting risk level and interest rate.
+* Modelling using all data
 
